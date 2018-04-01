@@ -1,0 +1,59 @@
+@import 'variables.scss';
+
+#root, .App {
+    height: 100%;
+}
+.layout {
+    height: calc(100% - 52px);
+    .container {
+        height: 100%;
+    }
+    .form-section {
+        background: $FORM_BACKGROUND_LIGHT;
+        background: -moz-linear-gradient(top, $FORM_BACKGROUND_LIGHT 0%, $FORM_BACKGROUND_DARK 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, $FORM_BACKGROUND_LIGHT), color-stop(100%, $FORM_BACKGROUND_DARK));
+        background: -webkit-linear-gradient(top, $FORM_BACKGROUND_LIGHT 0%, $FORM_BACKGROUND_DARK 100%);
+        background: -o-linear-gradient(top, $FORM_BACKGROUND_LIGHT 0%, $FORM_BACKGROUND_DARK 100%);
+        background: -ms-linear-gradient(top, $FORM_BACKGROUND_LIGHT 0%, $FORM_BACKGROUND_DARK 100%);
+        background: linear-gradient(to bottom, $FORM_BACKGROUND_LIGHT 0%, $FORM_BACKGROUND_DARK 100%);
+
+    }
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+button {
+    background: $BUTTON_COLOR;
+    color: $WHITE;
+    outline: none;
+    border: none;
+    padding: 10px;
+    min-width: 200px;
+    border-radius: 5px;
+}
+
+@media (min-width: 1023px) {
+    .container {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    .layout {
+        height: calc(100% - 52px);
+        .container {
+            display: flex;
+            height: 100%;
+        }
+        .form-section {
+            width: 40%;
+            background: $FORM_BACKGROUND;
+        }
+        .search-section {
+            width: 60%;
+            height: 100%;
+        }
+    }
+}

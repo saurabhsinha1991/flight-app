@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+
+.form-wrapper {
+    padding: 40px;
+    color: $WHITE;
+    text-align: center;
+    ul {
+        padding: 0;
+        li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 10px 15px;
+            border: 1px solid #845537;
+            margin-right: 10px;
+            cursor: pointer;
+            &.active {
+                background: $ACTIVE_TAB_COLOR;
+                border-color: $ACTIVE_TAB_COLOR;
+            } 
+        }
+    }
+}
+
+.auto-complete-wrapper {
+    position: relative;
+    .auto-complete-suggestion {
+        position: absolute;
+        width: 100%;
+        top: calc(100% - 10px);
+        background: $WHITE;
+        z-index: 9;
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            width: 100%;
+            color: $GREY;
+            float: left;
+            padding: 10px 20px;
+            p {
+                margin: 0;
+                font-size: 14px;
+            }
+            .name {
+                float: left;
+            }
+            .code {
+                float: right;
+                color: $LIGHT_GREY;
+            }
+        }
+    }
+}

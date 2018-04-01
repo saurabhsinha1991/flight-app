@@ -1,0 +1,59 @@
+.search-wrapper {
+    padding: 30px;
+    height: 100%;
+    overflow-y: scroll;
+    .header {
+        border-bottom: 2px solid;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+    h2 {
+        float: left;
+        width: calc(100% - 150px);
+    }
+    .dates {
+        float: right;
+        width: 150px;
+    }
+    .flight {
+        border: 1px solid grey;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .details .depart-details {
+        display: inline-block;
+        margin-right: 20px;
+        line-height: 1; 
+        font-size: 14px;
+        p {
+            margin: 5px 0;
+            &:first-child {
+                font-weight: bold;
+            }
+            &.direction {
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+    }
+    .book {
+        margin-top: 20px;
+    }
+    .result-wrap {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1023px) {
+    .flight {
+        position: relative;
+    }
+    .book {
+        margin-top: 20px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+    }
+}
